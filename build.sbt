@@ -1,8 +1,11 @@
-organization	:= "de.heikoseeberger"
-name			:= "scala-train"
-version			:= "2.0.0"
+organization := "de.heikoseeberger"
 
-scalaVersion	:= "2.11.8"
+name := "scala-train"
+
+version := "2.0.0"
+
+scalaVersion := "2.11.8"
+
 scalacOptions	:= List(
   "-unchecked",
   "-deprecation",
@@ -11,8 +14,9 @@ scalacOptions	:= List(
 
 initialCommands := "import de.heikoseeberger.scalatrain._"
 
-libraryDependencies ++= List(
-  "org.scalatest" %% "scalatest" % "2.2.5" % "test"
+libraryDependencies ++= Seq(
+  "org.scalatest" %% "scalatest" % "2.2.5" % "test",
+  "org.scalacheck" %% "scalacheck" % "1.12.4" % "test"
 )
 
 import scalariform.formatter.preferences._
