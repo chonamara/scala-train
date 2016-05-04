@@ -11,6 +11,10 @@ scalacOptions	:= List(
 
 initialCommands := "import de.heikoseeberger.scalatrain._"
 
+libraryDependencies ++= List(
+  "org.scalatest" %% "scalatest" % "2.2.5" % "test"
+)
+
 import scalariform.formatter.preferences._
 SbtScalariform.autoImport.preferences := SbtScalariform.autoImport.preferences.value
   .setPreference(AlignSingleLineCaseStatements, true)
